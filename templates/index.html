@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Anderson Silva</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0)), url('static/banner2.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-bg {
+                background-image: url('static/banner2mobile.png');
+            }
+        }
+
+        #inicio {
+            margin-top: rem;
+        }
+
+        .practice-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /*  
+
+        #card {
+            margin-bottom: 5rem;
+        }
+*/
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4f46e5;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .active-nav::after {
+            width: 100%;
+        }
+    </style>
+
+    <link rel="icon" type="image/png"
+        href="https://github.com/allysonaggp/site-advocacia/blob/main/templates/static/icon%20favicon.jpg?raw=true">
+
+</head>
+
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div id=" " class="container mx-auto px-4 py-4 flex justify-between items-center ">
+            <div class="flex items-center">
+                <div class="bg-lime-600 text-white p-2 rounded-lg mr-3">
+                    <i class="fas fa-balance-scale text-2xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-800">
+                    <span class="text-lime-600">Prof.</span> Anderson Silva
+                </h1>
+            </div>
+
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="nav-link active-nav text-gray-800 font-medium">Início</a>
+                <a href="#sobre" class="nav-link text-gray-600 hover:text-gray-800 font-medium">Sobre</a>
+                <a href="#areas" class="nav-link text-gray-600 hover:text-gray-800 font-medium">Áreas de Atuação</a>
+                <a href="#depoimentos" class="nav-link text-gray-600 hover:text-gray-800 font-medium">Depoimentos</a>
+                <a href="#contato" class="nav-link text-gray-600 hover:text-gray-800 font-medium">Contato</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-3">
+                <a href="#inicio" class="text-gray-800 font-medium py-2 border-b border-gray-100">Início</a>
+                <a href="#sobre"
+                    class="text-gray-600 hover:text-gray-800 font-medium py-2 border-b border-gray-100">Sobre</a>
+                <a href="#areas"
+                    class="text-gray-600 hover:text-gray-800 font-medium py-2 border-b border-gray-100">Áreas de
+                    Atuação</a>
+                <a href="#depoimentos"
+                    class="text-gray-600 hover:text-gray-800 font-medium py-2 border-b border-gray-100">Depoimentos</a>
+                <a href="#contato" class="text-gray-600 hover:text-gray-800 font-medium py-2">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-24 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Prof. Anderson Silva</h1>
+                <p class="text-xl md:text-2xl mb-8 leading-relaxed">Fundador do Centro Criativo de ÁS, Polímata,<br>
+                    Professor, Meteorologista e Artista Educador.</p>
+
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contato"
+                        class="bg-lime-800 hover:bg-lime-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+                        <i class="fas fa-phone-alt mr-2"></i> Agende uma Consulta
+                    </a>
+                    <a href="#areas"
+                        class="bg-white hover:bg-gray-100 text-lime-600 font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+                        <i class="fas fa-gavel mr-2"></i> Minhas Especialidades
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="static/anderson-silva2.jpg" alt="Prof. Anderson Silva"
+                        class="rounded-lg shadow-xl w-full h-auto max-w-md mx-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre o Prof. Anderson Silva</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Educador, cientista e artista pernambucano com
+                        trajetória marcada pela paixão pelo conhecimento em múltiplas áreas. Fundador do Centro Criativo
+                        de ÁS, ele é um polímata contemporâneo que unifica saberes acadêmicos e populares para oferecer
+                        soluções inovadoras em educação, cultura, ciência e meio ambiente.
+                        Licenciado em Geografia pelo Instituto Federal de Pernambuco, Especialista no Ensino de
+                        Geografia e Mestre em Meteorologia pela Universidade Federal de Alagoas, Anderson também é
+                        estudante de Engenharia de Pesca e atua como professor da rede pública estadual, lecionando
+                        disciplinas como Geografia, Filosofia, Artes e aprofundamentos interdisciplinares. Sua vivência
+                        em sala de aula e em projetos de extensão comunitária reflete seu compromisso com a
+                        transformação social através do conhecimento.
+                        Com espírito inquieto e criativo, Anderson desenvolve e coordena projetos educativos,
+                        ambientais, culturais e tecnológicos que integram ciência e arte, teoria e prática, tradição e
+                        inovação. Idealizador de ações como a Exposição Memórias do Rio Jaboatão, o Projeto de
+                        Gamificação Multimídia Caminhos da Confederação do Equador e pesquisas sobre microclimas
+                        escolares, ele se destaca pela habilidade em conectar temas complexos com experiências
+                        significativas para estudantes e comunidades.
+                        O Centro Criativo de ÁS nasce como extensão natural de sua trajetória: um espaço que une
+                        educação, meteorologia, geotecnologias, arte e consultoria interdisciplinar, voltado para quem
+                        busca aprender, inovar, ensinar e transformar realidades com criatividade, consciência e
+                        propósito.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Areas -->
+    <section id="areas" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Áreas de Atuação</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Nossa equipe especializada oferece suporte jurídico completo
+                    em diversas áreas do direito.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div id="card"
+                    class="bg-white rounded-xl shadow-md overflow-hidden practice-card transition duration-300">
+                    <div class="bg-lime-600 p-5 flex items-center space-x-5">
+                        <i class="fas fa-users text-white text-3xl"></i>
+                        <span class="text-white text-lg font-bold">
+                            Educação e Formação
+                            <br>
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3"></h3>
+                        <ul class="text-gray-600 list-disc pl-5">
+                            <li><strong>Serviços, consultorias, cursos e oficinas temáticas</strong>
+                                <br><br>
+                            <li><strong>Consultoria para projetos escolares e feiras de ciências estagiários:
+                                </strong>Pedagogia crítica, Gamificação, Uso de tecnologias e Metodologias ativas.</li>
+                            <br>
+                            <li><strong>Mentoria em polimatia e organização de estudos interdisciplinares</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div id="card"
+                    class="bg-white rounded-xl shadow-md overflow-hidden practice-card transition duration-300">
+                    <div class="bg-lime-600 p-5 flex items-center space-x-5">
+                        <i class="fas fa-users text-white text-3xl"></i>
+                        <span class="text-white text-lg font-bold">
+                            Meteorologia e Meio Ambiente
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <ul class="text-gray-600 list-disc pl-5">
+                            <li><strong>Previsão do tempo personalizada para comunidades, escolas, agricultores
+                                    ou eventos.</strong></li><br>
+                            <li><strong>Previsão de colheita e emissão de Gases de Efeito Estufa.</strong></li><br>
+
+                            <li><strong>Consultoria em gestão de riscos climáticos e prevenção de desastres.</strong>
+                            </li><br>
+                            <li><strong>Monitoramento de microclimas urbanos e escolares.</strong></li><br>
+                            <li><strong>Inventários, mensuração e análise de gases de efeito estufa (GEE).</strong></li>
+                            <br>
+                            <li><strong>Projetos de educação ambiental e sustentabilidade urbana/rural.</strong></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div id="card"
+                    class="bg-white rounded-xl shadow-md overflow-hidden practice-card transition duration-300">
+                    <div class="bg-lime-600 p-5 flex items-center space-x-5">
+                        <i class="fas fa-users text-white text-3xl"></i>
+                        <span class="text-white text-lg font-bold">
+                            Geotecnologias e Geografia Aplicada </span>
+                    </div>
+                    <div class="p-6">
+                        <ul class="text-gray-600 list-disc pl-5">
+                            <li><strong>Mapeamento temático com QGIS/Google Earth/ArcGIS</strong></li><br>
+                            <li><strong>Criação de mapas interativos com QR Codes</strong></li><br>
+                            <li><strong>Consultoria em planejamento territorial e urbano participativo</strong></li>
+                            <br>
+                            <li><strong>Oficinas de cartografia e geolocalização educativa</strong></li><br>
+                            <li><strong>Projetos de memória e patrimônio geográfico-cultural</strong></li><br>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div id="card"
+                    class="bg-white rounded-xl shadow-md overflow-hidden practice-card transition duration-300">
+                    <div class="bg-lime-600 p-5 flex items-center space-x-5">
+                        <i class="fas fa-users text-white text-3xl"></i>
+                        <span class="text-white text-lg font-bold">
+                            Artes e Cultura </span>
+                    </div>
+                    <div class="p-6">
+                        <ul class="text-gray-600 list-disc pl-5">
+                            <li><strong>Oficinas artísticas e culturais (pintura, teatro, fotografia, música)</strong>
+                            </li>
+                            <br>
+                            <li><strong>Criação de exposições interativas (como a do Rio Jaboatão)</strong></li><br>
+                            <li><strong>Produção de materiais visuais e audiovisuais para eventos ou projetos</strong>
+                            </li>
+                            <br>
+                            <li><strong>Roteiros culturais e históricos guiados com storytelling</strong></li><br>
+                            <li><strong>Jogos educativos e multimídia sobre história local, geografia e meio
+                                    ambiente</strong></li><br>
+                            <li><strong>Elaboração de Projetos culturais</strong></li><br>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div id="card"
+                    class="bg-white rounded-xl shadow-md overflow-hidden practice-card transition duration-300">
+                    <div class="bg-lime-600 p-5 flex items-center space-x-5">
+                        <i class="fas fa-users text-white text-3xl"></i>
+                        <span class="text-white text-lg font-bold">Tecnologia e Comunicação</span>
+                    </div>
+                    <div class="p-6">
+                        <ul class="text-gray-600 list-disc pl-5">
+                            <li><strong>Criação de apresentações interativas (slides, infográficos, quizzes)</strong>
+                            </li>
+                            <br>
+                            <li><strong>Consultoria em gamificação para ensino</strong></li><br>
+                            <li><strong>Elaboração de materiais gráficos e didáticos (cartilhas, folhetos,
+                                    cartazes)</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div id="card"
+                    class="bg-white rounded-xl shadow-md overflow-hidden practice-card transition duration-300">
+                    <div class="bg-lime-600 p-5 flex items-center space-x-5">
+                        <i class="fas fa-users text-white text-3xl"></i>
+                        <span class="text-white text-lg font-bold">Consultoria e Projetos Interdisciplinares</span>
+                    </div>
+                    <div class="p-6">
+                        <ul class="text-gray-600 list-disc pl-5">
+                            <li><strong>Elaboração e acompanhamento de projetos escolares, sociais e ambientais</strong>
+                            </li><br>
+                            <li><strong>Escrita e revisão de artigos, projetos de pesquisa e relatórios
+                                    técnicos</strong>
+                            </li><br>
+                            <li><strong>Capacitação em escrita científica e metodologia de pesquisa</strong></li><br>
+                            <li><strong>Mentoria para jovens pesquisadores</strong></li><br>
+                            <li><strong>Palestras motivacionais e educativas em escolas e eventos</strong></li><br>
+                            <li><strong>Elaboração de projetos científicos com base na necessidade evidenciada</strong>
+                            </li>
+                            <br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="depoimentos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Depoimentos de Alunos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Veja o que meus alunos dizem sobre meu trabalho</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-lg p-6 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="bg-lime-100 text-lime-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Carlos Eduardo</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "O professor de Geografia mais inspirador que já tive! Consegue transformar cada aula em uma
+                        verdadeira viagem pelo mundo, sempre com explicações claras, atualizadas e conectadas com a
+                        realidade."
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 rounded-lg p-6 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="bg-lime-100 text-lime-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Amanda Rocha</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Um mestre da Geografia! Ensina com paixão, faz a gente refletir sobre o nosso papel no planeta
+                        e desperta o interesse até de quem nunca gostou da matéria. Uma referência dentro e fora da sala
+                        de aula."</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 rounded-lg p-6 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="bg-lime-100 text-lime-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Roberto Santos</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Excelente professor! Didática impecável, domínio completo do conteúdo e um jeito único de nos
+                        fazer entender o mundo por diferentes perspectivas. A Geografia ganha vida com ele."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-gray-400 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-00">Entre em Contato</h2>
+                    <p class="mb-8 text-gray-00">
+                        Estamos prontos para ajudar. Agende uma consulta ou envie sua dúvida
+                        através do formulário.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <!--
+                            <div class="bg-lime-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Escritório</h4>
+                                <p class="text-limelime-100">Av. um, nª 20 <br>Curado IV Jaboatão dos Guararapes - PE,
+                                    54270-090</p>
+                            </div>
+                            -->
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-gray-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Telefones</h4>
+                                <p class="text-lime-00"><strong>(81) 9 8536-6821</strong><br>(81) 9 8536-6821 (WhatsApp)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-gray-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">E-mail</h4>
+                                <p class="text-gray-00">centrocriativodeas@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-gray-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock  "></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Horário de Atendimento</h4>
+                                <p class="text-stone-50">Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 12h (com
+                                    agendamento)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex space-x-4">
+                        <!--
+                        <a href="#"
+                            class="bg-white text-gray-900 p-3 rounded-full hover:bg-lime-50 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        -->
+                        <a href="https://www.instagram.com/centrocriativoprofessoras/"
+                            class="bg-white text-gray-900 p-3 rounded-full hover:bg-lime-50 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <!--
+                        <a href="#"
+                            class="bg-white text-gray-900 p-3 rounded-full hover:bg-lime-50 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        -->
+                        <a href="#"
+                            class="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-200 transition duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2">
+                    <form method="POST" action="/" class="bg-white rounded-lg shadow-lg p-6 text-gray-800">
+                        <h3 class="text-xl font-bold mb-6 text-lime-800">Envie sua Mensagem</h3>
+
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                            <select id="subject" name="subject" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500">
+                                <option value="">Selecione...</option>
+                                <option value="family">Educação e Formação</option>
+                                <option value="real_estate">Meteorologia e Meio Ambiente</option>
+                                <option value="consumer">Geotecnologias e Geografia Aplicada</option>
+                                <option value="labor">Artes e Cultura</option>
+                                <option value="medical">Tecnologia e Comunicação</option>
+                                <option value="digital">Consultoria e Projetos Interdisciplinares</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-lime-600 hover:bg-lime-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map 
+    <div class="h-96 bg-gray-200">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1170.1723532003205!2d-34.99560793039038!3d-8.071249699497288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1c8781c886f7%3A0xee31c2da584098f7!2sAv.%20Um%2C%2007%20C%20-%20Bloco%2020%20-%20Curado%2C%20Jaboat%C3%A3o%20dos%20Guararapes%20-%20PE%2C%2054270-090!5e1!3m2!1spt-BR!2sbr!4v1748017263285!5m2!1spt-BR!2sbr"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    -->
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-lime-600 text-white p-2 rounded-lg mr-3">
+                            <i class="fas fa-balance-scale text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">
+                            <span class="text-lime-400">Prof.</span> Anderson Silva
+                        </h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Fundador do Centro Criativo de ÁS, Polímata,
+                        Professor, Meteorologista e Artista Educador.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition duration-300">Início</a>
+                        </li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition duration-300">Sobre</a>
+                        </li>
+                        <li><a href="#areas" class="text-gray-400 hover:text-white transition duration-300">Áreas de
+                                Atuação</a></li>
+                        <li><a href="#depoimentos"
+                                class="text-gray-400 hover:text-white transition duration-300">Depoimentos</a></li>
+                        <li><a href="#contato"
+                                class="text-gray-400 hover:text-white transition duration-300">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Áreas de Atuação</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Educação e
+                                Formação</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Meteorologia e
+                                Meio Ambiente</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Geotecnologias e
+                                Geografia Aplicada</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Artes e
+                                Cultura</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Tecnologia e
+                                Comunicação</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Consultoria e
+                                Projetos Interdisciplinares
+                            </a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">
+                        Assine nossa newsletter para receber informações jurídicas importantes.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail"
+                            class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit"
+                            class="bg-lime-600 hover:bg-lime-700 px-4 py-2 rounded-r-lg transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2025 Prof. Anderson Silva. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/+558179109782" target="_blank"
+            class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center transition duration-300">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Highlight active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                link.classList.remove('text-gray-800');
+                link.classList.add('text-gray-600');
+
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active-nav');
+                    link.classList.add('text-gray-800');
+                    link.classList.remove('text-gray-600');
+                }
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
