@@ -56,5 +56,10 @@ def contato():
 
     return render_template('index.html')
 
+@app.route('/trabalhe_conoso')
+def trabalhe_conoso():
+    return render_template('trabalhe_conoso.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
+
