@@ -60,7 +60,7 @@ def contato():
 def trabalhe_conosco():
     return render_template('trabalhe_conosco.html')
 @app.route('/jovem_aprediz')
-def trabalhe_conosco():
+def jovem_aprendiz():
     return render_template('Jovem_aprendiz.html')
 
 if __name__ == '__main__':
