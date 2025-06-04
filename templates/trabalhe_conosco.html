@@ -78,7 +78,7 @@
                         <div class="p-6 hover:bg-gray-50 transition">
                             <label class="flex flex-col md:flex-row md:items-center cursor-pointer">
                                 <div class="flex items-start mb-4 md:mb-0 md:mr-6">
-                                    <input type="radio" name="job" value="jovemAprediz"
+                                    <input type="radio" name="job" value="jovem_aprendiz"
                                         class="custom-radio h-5 w-5 text-purple-600 border-gray-300 focus:ring-purple-500 mt-1">
                                 </div>
                                 <div class="flex-grow">
@@ -169,8 +169,8 @@
 
             // Redireciona para o site correspondente à vaga
             switch (value) {
-                case "jovemAprendiz":
-                    window.location.href = "{{url_for('trabalhe_conosco')}}";
+                case "jovem_aprendiz":
+                    window.location.href = "{{url_for('jovem_aprendiz')}}";
                     break;
                 case "frontend":
                     window.location.href = "https://seusite.com/frontend";
