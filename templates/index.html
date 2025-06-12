@@ -19,12 +19,24 @@
         @media screen and (max-width: 768px) {
             .hero-bg {
                 background-image: url('https://github.com/allysonaggp/Centro-criativoAS/blob/main/templates/static/banner2mobile.png?raw=true');
+                width: 100%;
+                height: auto;
             }
+
+            .container2 {
+
+                margin-top: 150px;
+                margin-bottom: ;
+            }
+
+            .texto-nome {
+                display: none;
+            }
+
         }
 
-        #inicio {
-            margin-top: rem;
-        }
+
+
 
         .practice-card:hover {
             transform: translateY(-10px);
@@ -91,9 +103,10 @@
                 <a href="#inicio" class="nav-link active-nav text-gray-800 font-medium">Início</a>
                 <a href="#sobre" class="nav-link text-gray-600 hover:text-gray-800 font-medium">Sobre</a>
                 <a href="#areas" class="nav-link text-gray-600 hover:text-gray-800 font-medium">Áreas de Atuação</a>
-                <a href="#depoimentos" class="nav-link text-gray-600 hover:text-gray-800 font-medium">Depoimentos</a>                
+                <a href="#depoimentos" class="nav-link text-gray-600 hover:text-gray-800 font-medium">Depoimentos</a>
                 <a href="#contato" class="nav-link text-gray-600 hover:text-gray-800 font-medium">Contato</a>
-                <a href="#Trabalhe-conosco" class="nav-link text-gray-600 hover:text-gray-800 font-medium">Trabalhe conosco</a>
+                <a href="#Trabalhe-conosco" class="nav-link text-gray-600 hover:text-gray-800 font-medium">Trabalhe
+                    conosco</a>
             </nav>
 
             <div class="md:hidden">
@@ -112,21 +125,24 @@
                 <a href="#areas"
                     class="text-gray-600 hover:text-gray-800 font-medium py-2 border-b border-gray-100">Áreas de
                     Atuação</a>
-                <a href="#depoimentos"class="text-gray-600 hover:text-gray-800 font-medium py-2 border-b border-gray-100">Depoimentos</a>
+                <a href="#depoimentos"
+                    class="text-gray-600 hover:text-gray-800 font-medium py-2 border-b border-gray-100">Depoimentos</a>
                 <a href="#contato" class="text-gray-600 hover:text-gray-800 font-medium py-2">Contato</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero-bg text-white py-24 md:py-32">
-        <div class="container mx-auto px-4">
+    <section class="hero-bg text-white py-24 md:py-32">
+        <div class="container container2 mx-auto px-4">
             <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Prof. Anderson Silva</h1>
-                <p class="text-xl md:text-2xl mb-8 leading-relaxed">Fundador do Centro Criativo de ÁS, Polímata,<br>
-                    Professor, Meteorologista e Artista Educador.</p>
+                <div class="divNome">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Prof. Anderson Silva</h1>
+                    <p class="texto-nome text-xl md:text-2xl mb-8 leading-relaxed">Fundador do Centro Criativo de As, Polímata,<br>
+                        Professor, Meteorologista e Artista Educador.</p>
+                </div>
 
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <div id="divBanner" class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                     <a href="#contato"
                         class="bg-lime-800 hover:bg-lime-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300">
                         <i class="fas fa-phone-alt mr-2"></i> Agende uma Consulta
@@ -145,8 +161,8 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <img src="https://github.com/allysonaggp/Centro-criativoAS/blob/main/templates/static/anderson-silva2.jpg?raw=true" alt="Prof. Anderson Silva"
-                        class="rounded-lg shadow-xl w-full h-auto max-w-md mx-auto">
+                    <img src="https://github.com/allysonaggp/Centro-criativoAS/blob/main/templates/static/anderson-silva2.jpg?raw=true"
+                        alt="Prof. Anderson Silva" class="rounded-lg shadow-xl w-full h-auto max-w-md mx-auto">
                 </div>
                 <div class="md:w-1/2">
                     <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre o Prof. Anderson Silva</h2>
@@ -523,10 +539,12 @@
                                 <option value="">Selecione...</option>
                                 <option value="Educação e Formação">Educação e Formação</option>
                                 <option value="Meteorologia e Meio Ambiente">Meteorologia e Meio Ambiente</option>
-                                <option value="Geotecnologias e Geografia Aplicada">Geotecnologias e Geografia Aplicada</option>
+                                <option value="Geotecnologias e Geografia Aplicada">Geotecnologias e Geografia Aplicada
+                                </option>
                                 <option value="Artes e Cultura">Artes e Cultura</option>
                                 <option value="Tecnologia e Comunicação">Tecnologia e Comunicação</option>
-                                <option value="Consultoria e Projetos Interdisciplinares">Consultoria e Projetos Interdisciplinares</option>
+                                <option value="Consultoria e Projetos Interdisciplinares">Consultoria e Projetos
+                                    Interdisciplinares</option>
                                 <option value="Outros">Outros</option>
                             </select>
                         </div>
@@ -625,7 +643,7 @@
                         </button>
                     </form>
                     <br>
-                    <h4><a id="Trabalhe-conosco"class="text-lg font-medium">Trabalhe conosco</a></h4>
+                    <h4><a id="Trabalhe-conosco" class="text-lg font-medium">Trabalhe conosco</a></h4>
                     <!--adicionar link do formulario de cadastro analise curriculo-->
                     <a href="{{url_for('trabalhe_conosco')}}" class=" text-gray-600 hover:text-white ">Vagas</a>
                 </div>
