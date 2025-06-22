@@ -2,31 +2,7 @@
     height: 41px;
     margin-right: 13px;
 }
-   @media screen and (max-width: 768px) {
-            .hero-bg {
-                background-image: url('https://github.com/allysonaggp/Centro-criativoAS/blob/main/templates/static/banner2mobile.png?raw=true');
-                width: 100%;
-                height: auto;
-            }
-
-            .container2 {
-
-                margin-top: 150px;
-                margin-bottom: 0;
-            }
-
-            .texto-nome {
-                display: none;
-            }
-
-        }
-             .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0)), url('https://github.com/allysonaggp/Centro-criativoAS/blob/main/templates/static/banner2.png?raw=true');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-
-        }
+  
 
         .practice-card:hover {
             transform: translateY(-10px);

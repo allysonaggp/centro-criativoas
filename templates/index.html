@@ -7,9 +7,35 @@
     <title>Centro Criativo de As</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="static/livros2.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/allysonaggp/Centro-criativoAS/refs/heads/main/templates/static/livros2.png">
+<style>
+     @media screen and (max-width: 768px) {
+            .hero-bg {
+                background-image: url('https://github.com/allysonaggp/Centro-criativoAS/blob/main/templates/static/banner2mobile.png?raw=true');
+                width: 100%;
+                height: auto;
+            }
 
+            .container2 {
+
+                margin-top: 150px;
+                margin-bottom: 0;
+            }
+
+            .texto-nome {
+                display: none;
+            }
+
+        }
+             .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0)), url('https://github.com/allysonaggp/Centro-criativoAS/blob/main/templates/static/banner2.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+</style>
 </head>
 
 <body class="font-sans bg-gray-50">
@@ -19,10 +45,10 @@
             <div class="flex items-center">
                 <!-- balança -->
                 <div class="">
-                    <img class="livro" src="static/livros2.png" alt="Anderson Silva">
+                    <img class="livro" src="https://raw.githubusercontent.com/allysonaggp/Centro-criativoAS/refs/heads/main/templates/static/livros2.png" alt="livro">
                 </div>
                 <h1 class="text-2xl font-bold text-gray-800">
-                    <span class="text-lime-600">Prof.</span> Anderson Silva
+                     Centro Criativo de <span class="text-lime-600">AS</span>
                 </h1>
             </div>
 
