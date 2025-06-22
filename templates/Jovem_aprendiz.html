@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia Elite - Agendamento Online</title>
+    <title>Centro Criativo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -490,126 +490,7 @@
 
     <script>
 
-        // Booking System
-        document.addEventListener('DOMContentLoaded', function () {
-            // Step Navigation
-            const nextButtons = document.querySelectorAll('.next-step');
-            const prevButtons = document.querySelectorAll('.prev-step');
-            const steps = document.querySelectorAll('.step-content');
-            const stepIndicators = document.querySelectorAll('.step');
-            const progressBar = document.getElementById('progressBar');
-
-            nextButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const nextStep = this.getAttribute('data-next');
-                    navigateToStep(nextStep);
-                });
-            });
-
-            prevButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const prevStep = this.getAttribute('data-prev');
-                    navigateToStep(prevStep);
-                });
-            });
-
-            function navigateToStep(stepNumber) {
-                // Validate current step before proceeding
-                const currentStep = document.querySelector('.step-content:not(.hidden)').id.replace('step', '');
-
-                if (stepNumber > currentStep) {
-                    if (currentStep === '1' && !validateStep1()) return;
-                    if (currentStep === '2' && !validateStep2()) return;
-                    if (currentStep === '3' && !validateStep3()) return;
-
-                }
-
-                // Hide all steps
-                steps.forEach(step => {
-                    step.classList.add('hidden');
-                });
-
-                // Show selected step
-                document.getElementById(`step${stepNumber}`).classList.remove('hidden');
-
-                // Update step indicators
-                stepIndicators.forEach((indicator, index) => {
-                    const indicatorStep = indicator.getAttribute('data-step');
-                    if (indicatorStep <= stepNumber) {
-                        indicator.querySelector('div').classList.remove('bg-gray-300', 'text-gray-600');
-                        indicator.querySelector('div').classList.add('bg-indigo-500', 'text-white');
-                    } else {
-                        indicator.querySelector('div').classList.remove('bg-indigo-500', 'text-white');
-                        indicator.querySelector('div').classList.add('bg-gray-300', 'text-gray-600');
-                    }
-                });
-
-                // Update progress bar
-                const progressPercentage = (stepNumber / 4) * 100;
-                progressBar.style.width = `${progressPercentage}%`;
-
-                // Update summary if going to step 4
-                if (stepNumber === '4') {
-                    updateSummary();
-                }
-            }
-
-            function validateStep1() {
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                const cpf = document.getElementById('cpf').value;
-                const rg = document.getElementById('rg').value;
-
-
-                if (!name || !email || !phone || !cpf || !rg) {
-                    alert('Por favor, preencha todos os campos obrigatórios.');
-                    return false;
-                }
-
-                // Simple email validation
-                if (!email.includes('@') || !email.includes('.')) {
-                    alert('Por favor, insira um e-mail válido.');
-                    return false;
-                }
-
-                // Simple CPF validation (just checks length)
-                if (cpf.length !== 11 && cpf.length !== 14) { // 11 for numbers only, 14 for formatted
-                    alert('Por favor, insira um CPF válido.');
-                    return false;
-                }
-
-                return true;
-            }
-            function validateStep2() {
-                const name = document.getElementById('name').value;
-
-
-
-
-                return true;
-            }
-
-
-            function validateStep3() {
-                const name = document.getElementById('name').value;
-
-
-
-
-                return true;
-            }
-
-
-
-
-
-
-
-
-
-        });
-
+        
     </script>
 </body>
 

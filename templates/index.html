@@ -4,85 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Anderson Silva</title>
+    <title>Centro Criativo de As</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0)), url('https://github.com/allysonaggp/Centro-criativoAS/blob/main/templates/static/banner2.png?raw=true');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-
-        }
-
-        @media screen and (max-width: 768px) {
-            .hero-bg {
-                background-image: url('https://github.com/allysonaggp/Centro-criativoAS/blob/main/templates/static/banner2mobile.png?raw=true');
-                width: 100%;
-                height: auto;
-            }
-
-            .container2 {
-
-                margin-top: 150px;
-                margin-bottom: 0;
-            }
-
-            .texto-nome {
-                display: none;
-            }
-
-        }
-
-
-
-
-        .practice-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        /*  
-
-        #card {
-            margin-bottom: 5rem;
-        }
-*/
-        .testimonial-card {
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: scale(1.03);
-        }
-
-        .nav-link {
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #4f46e5;
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .active-nav::after {
-            width: 100%;
-        }
-    </style>
-
-    <link rel="icon" type="image/png"
-        href="https://github.com/allysonaggp/Centro-criativoAS/blob/main/templates/static/iconFavicon2.png?raw=true">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="static/livros2.png">
 
 </head>
 
@@ -91,8 +17,9 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div id="inicio" class="container mx-auto px-4 py-4 flex justify-between items-center ">
             <div class="flex items-center">
-                <div class="bg-lime-600 text-white p-2 rounded-lg mr-3">
-                    <i class="fas fa-balance-scale text-2xl"></i>
+                <!-- balança -->
+                <div class="">
+                    <img class="livro" src="static/livros2.png" alt="Anderson Silva">
                 </div>
                 <h1 class="text-2xl font-bold text-gray-800">
                     <span class="text-lime-600">Prof.</span> Anderson Silva
@@ -138,7 +65,8 @@
             <div class="max-w-3xl">
                 <div class="divNome">
                     <h1 class="text-4xl md:text-5xl font-bold mb-6">Prof. Anderson Silva</h1>
-                    <p class="texto-nome text-xl md:text-2xl mb-8 leading-relaxed">Fundador do Centro Criativo de As, Polímata,<br>
+                    <p class="texto-nome text-xl md:text-2xl mb-8 leading-relaxed">Fundador do Centro Criativo de As,
+                        Polímata,<br>
                         Professor, Meteorologista e Artista Educador.</p>
                 </div>
 
@@ -663,7 +591,7 @@
             <i class="fab fa-whatsapp text-2xl"></i>
         </a>
     </div>
-
+    <!--Teste-->
     <script>
         // Mobile menu toggle
         document.getElementById('menu-toggle').addEventListener('click', function () {
